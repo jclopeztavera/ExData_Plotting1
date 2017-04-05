@@ -43,11 +43,10 @@ data <-
         data.table = TRUE
     )
 
-data <- subset(x = data, subset = Date %in% c('1/2/2007', '2/2/2017'))
+data <- subset(x = data, subset = Date %in% c('1/2/2007', '2/2/2007'))
 
 datetime <- paste(data$Date, data$Time)
-datetime <- strptime(x = datetime, format = "%d/%m/%Y %H:%M:%S") %>%
-    as.POSIXct()
+datetime <- strptime(x = datetime, format = "%d/%m/%Y %H:%M:%S")
 
 data$Date <- NULL
 data$Time <- NULL
@@ -57,4 +56,4 @@ data <-
 
 data <- cbind(datetime, data)
 
-rm(data.file, txt.files, loader, sub.data, datetime)
+rm(data.file, txt.files, loader, datetime)
