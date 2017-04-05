@@ -1,6 +1,6 @@
 # JHU's Exploratory Data Analysis course at Coursera
 # Course Project 1
-# 1 - Producing Plot 1
+# 1 - Producing Plot 2
 
 png(
     filename = "plot2.png",
@@ -12,10 +12,10 @@ png(
 plot(
     x = data$datetime,
     y = data$Global_active_power,
-    col = "red",
+    col = "black",
     main = NULL,
     ylab = "Global Active Power (kilowatts)",
-    xlab = "Time",
+    xlab = "Time of the Day",
     type = "l"
 )
 
